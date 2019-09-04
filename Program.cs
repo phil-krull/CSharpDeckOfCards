@@ -14,9 +14,9 @@ namespace DeckOCards
                 new Player("Ty")
             };
             // add 5 cards to each players hand
-            for(int i = 0; i < Players.Length; i++)
+            for(int x = 0; x < 5; x++)
             {
-                for(int x = 0; x < 5; x++)
+                for(int i = 0; i < Players.Length; i++)
                 {
                     Players[i].Draw(Deck);
                 }
@@ -31,7 +31,7 @@ namespace DeckOCards
             for(int i = 0; i < Players.Length; i++)
             {
                 int Index = Rand.Next(Players[i].Hand.Count);
-                Players[i].Discard(Index);
+                Console.WriteLine($"{Players[i].Name} discarded a {Players[i].Discard(Index)}");
             }
             // display hand of all players
             for(int i = 0; i < Players.Length; i++)
